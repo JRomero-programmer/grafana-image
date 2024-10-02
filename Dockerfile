@@ -141,6 +141,3 @@ RUN rm -rf /usr/share/grafana/public/app/plugins/panel/alertlist \
 ##################################################################
 
 USER grafana
-
-## Entrypoint
-ENTRYPOINT [ "/bin/bash", "/entrypoint.sh" ]
