@@ -29,17 +29,6 @@ ENV GF_PATHS_PROVISIONING="/etc/grafana/provisioning"
 ENV GF_PATHS_PLUGINS="/var/lib/grafana/plugins"
 
 ##################################################################
-## Copy Artifacts
-## Required for the App plugin
-##################################################################
-
-COPY --chown=grafana:root dist /app
-COPY entrypoint.sh /
-
-## Copy Provisioning
-COPY --chown=grafana:root provisioning $GF_PATHS_PROVISIONING
-
-##################################################################
 ## Customization depends on the Grafana version
 ## May work or not work for the version different from the current
 ## Check GitHub file history for the previous Grafana versions
